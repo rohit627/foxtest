@@ -10,6 +10,9 @@ body {
   background: #e85445;
   color: #ECF0F1; }
 
+h1 {
+  text-align: center; }
+
 .container {
   margin: 0px 10px; }
 
