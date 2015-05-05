@@ -6,15 +6,70 @@ html {
 
 body {
   font-family: "Verdana", "Geneva", sans-serif;
-  background: #e85445;
-  background: #e85445;
+  background: #E74C3C;
+  background: #E74C3C;
   color: #ECF0F1; }
 
 h1 {
   text-align: center; }
 
-.container {
-  margin: 0px 10px; }
+.nav {
+  background: #ECF0F1;
+  background: #ECF0F1;
+  margin-bottom: 5px; }
+
+nav {
+  position: relative;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px; }
+  nav::after {
+    clear: both;
+    content: "";
+    display: table; }
+  nav ul {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    list-style: none;
+    float: left;
+    margin: 0px;
+    padding: 0px; }
+    nav ul:last-child {
+      margin-right: 0; }
+  nav li {
+    display: block;
+    float: right;
+    color: red;
+    margin: 0px;
+    padding: 0px; }
+    nav li a {
+      font-size: 1.05em;
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #E74C3C;
+      margin: 0px;
+      border-bottom: 5px solid #ECF0F1;
+      padding: 25px; }
+      nav li a:hover {
+        border-bottom: 5px solid #E74C3C; }
+  nav .logo {
+    padding: 0px;
+    margin-top: 10px;
+    font-size: 2em;
+    text-decoration: none;
+    color: #E74C3C;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    nav .logo:hover {
+      color: #2c3e50; }
+    nav .logo:last-child {
+      margin-right: 0; }
 
 section {
   max-width: 68em;
@@ -30,16 +85,34 @@ section {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 23.23176%;
+    width: 100%;
     text-align: center; }
     section aside:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 480px) {
+      section aside {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%; }
+        section aside:last-child {
+          margin-right: 0; } }
   section article {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 74.41059%;
-    border-left: 1px solid #2c3e50;
+    width: 100%;
+    border-left: none;
     padding-left: 15px; }
     section article:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 480px) {
+      section article {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 74.41059%;
+        margin-right: 0;
+        border-left: 1px solid #2c3e50; }
+        section article:last-child {
+          margin-right: 0; } }

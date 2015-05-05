@@ -7,7 +7,8 @@ var reload = browsersync.reload;
 
 gulp.task('serve',['sass'], function() {
     browsersync.init({
-        server: '.'
+        server: '.',
+        browser: "google chrome"
     });
     gulp.watch('sass/**/*.scss',['sass']);
     gulp.watch('*.html').on('change',reload);
