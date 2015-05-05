@@ -6,23 +6,35 @@ html {
 
 body {
   font-family: "Verdana", "Geneva", sans-serif;
-  background: #E74C3C;
-  background: #E74C3C;
-  color: #ECF0F1; }
+  background: #ECF0F1;
+  background: #ECF0F1;
+  color: #2c3e50; }
 
-h1 {
-  text-align: center; }
+@-webkit-keyframes swing {
+  from {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg); }
 
-.divider {
-  height: 90px;
-  width: 100%; }
+  to {
+    -webkit-transform: rotate(12deg) rotateY(50deg);
+            transform: rotate(12deg) rotateY(50deg); } }
+
+@keyframes swing {
+  from {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg); }
+
+  to {
+    -webkit-transform: rotate(12deg) rotateY(50deg);
+            transform: rotate(12deg) rotateY(50deg); } }
 
 .nav {
-  background: #ECF0F1;
-  background: #ECF0F1;
+  background: #E74C3C;
+  background: #E74C3C;
   margin-bottom: 5px;
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  box-shadow: 0 1px 0 #8aa4be; }
 
 nav {
   max-width: 68em;
@@ -57,17 +69,16 @@ nav {
       text-transform: uppercase;
       color: #2c3e50;
       margin: 0px;
-      border-bottom: 5px solid #ECF0F1;
-      -webkit-transition: border-bottom 0.2s ease-out;
-              transition: border-bottom 0.2s ease-out;
+      border-top: 5px solid #E74C3C;
+      -webkit-transition: border-top 0.2s ease-out;
+              transition: border-top 0.2s ease-out;
       padding: 1.25em 0.25em 1.25em 0.25em; }
       nav li a:hover {
-        border-bottom: 5px solid #E74C3C; }
+        border-top: 5px solid #ECF0F1; }
   nav .brand {
     padding: 0px;
     font-size: 2em;
     text-decoration: none;
-    color: #E74C3C;
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -78,7 +89,7 @@ nav {
       display: block;
       text-decoration: none;
       position: relative;
-      color: #2c3e50; }
+      color: #1a242f; }
       nav .brand a:hover::after {
         -webkit-animation: swing 0.3s infinite;
                 animation: swing 0.3s infinite;
@@ -149,20 +160,6 @@ section {
         section article:last-child {
           margin-right: 0; } }
 
-@-webkit-keyframes swing {
-  from {
-    -webkit-transform: rotate(12deg);
-            transform: rotate(12deg); }
-
-  to {
-    -webkit-transform: rotate(12deg) rotateY(50deg);
-            transform: rotate(12deg) rotateY(50deg); } }
-
-@keyframes swing {
-  from {
-    -webkit-transform: rotate(12deg);
-            transform: rotate(12deg); }
-
-  to {
-    -webkit-transform: rotate(12deg) rotateY(50deg);
-            transform: rotate(12deg) rotateY(50deg); } }
+.divider {
+  height: 90px;
+  width: 100%; }

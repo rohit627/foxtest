@@ -1,0 +1,74 @@
+.nav {
+    @include background($red);
+    margin-bottom: 5px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 1px 0 lighten($black,40%);
+}
+nav {
+    @include outer-container;
+    padding: 0 10px;
+    ul {
+        @include span-columns(6);
+        list-style: none;
+        float: left;
+        margin: 0px;
+        padding: 0px;
+    }
+    li {
+        display: block;
+        float: right;
+        color: red;
+        margin: 0px;
+        padding: 0px;
+        a {
+            font-size: 1.05em;
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $black;
+            margin: 0px;
+            border-top: 5px solid $red;
+            transition: border-top 0.2s ease-out;
+            &:hover {
+                border-top: 5px solid $white;
+            }
+            padding: 1.25em 0.25em 1.25em 0.25em;
+        }
+    }
+    .brand {
+        padding: 0px;
+        font-size: 2em;
+        text-decoration: none;
+        a {
+            margin-top: 12px;
+            float: left;
+            display: block;
+            text-decoration: none;
+            position: relative;
+            color: darken($black,10%);
+            &:hover {
+                &::after {
+                    animation: swing 0.3s infinite;
+                    animation-direction: alternate;
+                }
+            }
+            &::after {
+                display: block;
+                position: absolute;
+                top: -23px;
+                right: -60px;
+                @include background(url('../img/tail.png') right top no-repeat);
+                background-size: contain;
+                transform: rotate(12deg);
+                width: 150px;
+                height: 70px;
+                content: "" ;
+            }
+        }
+        &:hover {
+            color: $black;
+        }
+        @include span-columns(6);
+    }
+}

@@ -2,119 +2,12 @@
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 
+// Author Settings
+@import "settings/variables";
+@import "settings/settings";
+
 // Author Components
-@import "components/variables";
-
-body {
-    font-family:$verdana;
-    @include background($red);
-    color: $white;
-}
-h1 {
-    text-align: center;
-}
-.divider {
-    height: 90px;
-    width: 100%;
-}
-.nav {
-    @include background($white);
-    margin-bottom: 5px;
-    position: fixed;
-    width: 100%;
-}
-nav {
-    @include outer-container;
-    padding: 0 10px;
-    ul {
-        @include span-columns(6);
-        list-style: none;
-        float: left;
-        margin: 0px;
-        padding: 0px;
-    }
-    li {
-        display: block;
-        float: right;
-        color: red;
-        margin: 0px;
-        padding: 0px;
-        a {
-            font-size: 1.05em;
-            display: block;
-            text-decoration: none;
-            text-transform: uppercase;
-            color: $black;
-            margin: 0px;
-            border-bottom: 5px solid $white;
-            transition: border-bottom 0.2s ease-out;
-            &:hover {
-                border-bottom: 5px solid $red;
-            }
-            padding: 1.25em 0.25em 1.25em 0.25em;
-        }
-    }
-    .brand {
-        padding: 0px;
-        font-size: 2em;
-        text-decoration: none;
-        color: $red;
-        a {
-            margin-top: 12px;
-            float: left;
-            display: block;
-            text-decoration: none;
-            position: relative;
-            color: $black;
-            &:hover {
-                &::after {
-                    animation: swing 0.3s infinite;
-                    animation-direction: alternate;
-                }
-            }
-            &::after {
-                display: block;
-                position: absolute;
-                top: -23px;
-                right: -60px;
-                @include background(url('../img/tail.png') right top no-repeat);
-                background-size: contain;
-                transform: rotate(12deg);
-                width: 150px;
-                height: 70px;
-                content: "" ;
-            }
-        }
-        &:hover {
-            color: $black;
-        }
-        @include span-columns(6);
-    }
-}
-section {
-    @include outer-container;
-    border-bottom: 1px solid rgba($black,1);
-    padding-bottom: 15px;
-    aside {
-        @include span-columns(12);
-        @include media(480px) {
-            @include span-columns(3);
-        }
-        text-align: center;
-    }
-    article {
-        @include span-columns(12);
-        @include media(480px) {
-            @include span-columns(9);
-            @include omega();
-            border-left: 1px solid rgba($black,1);
-        }
-        border-left: none;
-        padding-left: 15px;
-    }
-}
-
-@keyframes swing {
-    from{ transform: rotate(12deg)}
-    to{transform: rotate(12deg) rotateY(50deg)}
-}
+@import "components/animations";
+@import "components/nav";
+@import "components/content";
+@import "components/helpers";
