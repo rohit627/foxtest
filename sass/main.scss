@@ -1,0 +1,30 @@
+// Vendor libraries
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/neat/app/assets/stylesheets/neat";
+
+// Author Components
+@import "components/variables";
+
+body {
+    font-family:$verdana;
+    @include background(lighten($red,2%));
+    color: $white;
+}
+
+.container {
+    margin: 0px 10px;
+}
+section {
+    @include outer-container;
+    border-bottom: 1px solid rgba($black,1);
+    padding-bottom: 15px;
+    aside {
+        @include span-columns(3);
+        text-align: center;
+    }
+    article {
+        @include span-columns(9);
+        border-left: 1px solid rgba($black,1);
+        padding-left: 15px;
+    }
+}
