@@ -13,13 +13,18 @@ body {
 h1 {
   text-align: center; }
 
+.divider {
+  height: 90px;
+  width: 100%; }
+
 .nav {
   background: #ECF0F1;
   background: #ECF0F1;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  position: fixed;
+  width: 100%; }
 
 nav {
-  position: relative;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
@@ -50,15 +55,16 @@ nav {
       display: block;
       text-decoration: none;
       text-transform: uppercase;
-      color: #E74C3C;
+      color: #2c3e50;
       margin: 0px;
       border-bottom: 5px solid #ECF0F1;
-      padding: 25px; }
+      -webkit-transition: border-bottom 0.2s ease-out;
+              transition: border-bottom 0.2s ease-out;
+      padding: 1.25em 0.25em 1.25em 0.25em; }
       nav li a:hover {
         border-bottom: 5px solid #E74C3C; }
-  nav .logo {
+  nav .brand {
     padding: 0px;
-    margin-top: 10px;
     font-size: 2em;
     text-decoration: none;
     color: #E74C3C;
@@ -66,9 +72,35 @@ nav {
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%; }
-    nav .logo:hover {
+    nav .brand a {
+      margin-top: 12px;
+      float: left;
+      display: block;
+      text-decoration: none;
+      position: relative;
       color: #2c3e50; }
-    nav .logo:last-child {
+      nav .brand a:hover::after {
+        -webkit-animation: swing 0.3s infinite;
+                animation: swing 0.3s infinite;
+        -webkit-animation-direction: alternate;
+                animation-direction: alternate; }
+      nav .brand a::after {
+        display: block;
+        position: absolute;
+        top: -23px;
+        right: -60px;
+        background: url('../img/tail.png') right top no-repeat;
+        background: url('../img/tail.png') right top no-repeat;
+        background-size: contain;
+        -webkit-transform: rotate(12deg);
+            -ms-transform: rotate(12deg);
+                transform: rotate(12deg);
+        width: 150px;
+        height: 70px;
+        content: ""; }
+    nav .brand:hover {
+      color: #2c3e50; }
+    nav .brand:last-child {
       margin-right: 0; }
 
 section {
@@ -116,3 +148,21 @@ section {
         border-left: 1px solid #2c3e50; }
         section article:last-child {
           margin-right: 0; } }
+
+@-webkit-keyframes swing {
+  from {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg); }
+
+  to {
+    -webkit-transform: rotate(12deg) rotateY(50deg);
+            transform: rotate(12deg) rotateY(50deg); } }
+
+@keyframes swing {
+  from {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg); }
+
+  to {
+    -webkit-transform: rotate(12deg) rotateY(50deg);
+            transform: rotate(12deg) rotateY(50deg); } }
