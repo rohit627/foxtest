@@ -1,4 +1,5 @@
 section {
+    position: relative;
     @include outer-container;
     border-bottom: 1px solid rgba($black,1);
     padding-bottom: 15px;
@@ -16,7 +17,9 @@ section {
             @include omega();
             border-left: 1px solid rgba($black,1);
         }
+        text-align: justify;
         border-left: none;
         padding-left: 15px;
+        padding-right: 15px;
     }
 }

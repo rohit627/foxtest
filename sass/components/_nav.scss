@@ -1,9 +1,10 @@
 .nav {
-    @include background($red);
+    z-index: 999;
+    // @include background($red);
     margin-bottom: 5px;
-    position: fixed;
+    position: absolute;
     width: 100%;
-    box-shadow: 0 1px 0 lighten($black,40%);
+    // box-shadow: 0 1px 0 lighten($black,40%);
 }
 nav {
     @include outer-container;
@@ -19,21 +20,19 @@ nav {
         display: block;
         float: right;
         color: red;
-        margin: 0px;
-        padding: 0px;
         a {
             font-size: 1.05em;
             display: block;
             text-decoration: none;
             text-transform: uppercase;
-            color: $black;
+            color: darken($black,10%);
             margin: 0px;
-            border-top: 5px solid $red;
+            border-top: 5px solid $white;
             transition: border-top 0.2s ease-out;
             &:hover {
-                border-top: 5px solid $white;
+                border-top: 5px solid $red;
             }
-            padding: 1.25em 0.25em 1.25em 0.25em;
+            padding: 1.25em 1em 1.25em 1em;
         }
     }
     .brand {
@@ -54,6 +53,7 @@ nav {
                 }
             }
             &::after {
+                transition: transform 0.3s ease-in;
                 display: block;
                 position: absolute;
                 top: -23px;
