@@ -1,15 +1,13 @@
-.header {
-    position: absolute;
+.hero {
     min-width: 100%;
-    display: table-cell;
     background-image: url('../img/fox.jpg');
-    background-position: 100px bottom;
+    background-position: 100px -150px;
     background-attachment: local;
     background-repeat: no-repeat;
     background-size:100%;
     min-height: 100%;
 }
-header {
+.header {
     height: 100%;
     text-align: center;
     margin-top: 0px;

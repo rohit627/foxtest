@@ -2,7 +2,7 @@
     z-index: 999;
     // @include background($red);
     margin-bottom: 5px;
-    position: absolute;
+    position: relative;
     width: 100%;
     // box-shadow: 0 1px 0 lighten($black,40%);
 }
@@ -32,7 +32,7 @@ nav {
             &:hover {
                 border-top: 5px solid $red;
             }
-            padding: 1.25em 1em 1.25em 1em;
+            padding: 1.35em 1em 1.35em 1em;
         }
     }
     .brand {
@@ -40,7 +40,7 @@ nav {
         font-size: 2em;
         text-decoration: none;
         a {
-            margin-top: 12px;
+            margin-top: 14px;
             float: left;
             display: block;
             text-decoration: none;
