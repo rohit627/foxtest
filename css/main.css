@@ -6,8 +6,8 @@ html {
 
 body {
   font-family: "Verdana", "Geneva", sans-serif;
-  background: #ECF0F1;
-  background: #ECF0F1;
+  background: #DDDDDB;
+  background: #DDDDDB;
   color: #2c3e50; }
 
 @-webkit-keyframes swing {
@@ -65,7 +65,7 @@ nav {
       text-transform: uppercase;
       color: #1a242f;
       margin: 0px;
-      border-top: 5px solid #ECF0F1;
+      border-top: 5px solid #DDDDDB;
       -webkit-transition: border-top 0.2s ease-out;
               transition: border-top 0.2s ease-out;
       padding: 1.35em 1em 1.35em 1em; }
@@ -114,7 +114,7 @@ nav {
 
 .hero {
   min-width: 100%;
-  background-image: url('../img/fox.jpg');
+  background-image: url('../img/fox3.jpg');
   background-position: 100px -150px;
   background-attachment: local;
   background-repeat: no-repeat;
@@ -154,8 +154,8 @@ nav {
     border-radius: 2px;
     padding: 5px 10px;
     cursor: pointer;
-    -webkit-transition: all 0.2s ease-in;
-            transition: all 0.2s ease-in; }
+    -webkit-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out; }
     .header button:hover {
       color: #E74C3C;
       border: 1px solid #E74C3C; }
