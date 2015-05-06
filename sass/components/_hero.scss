@@ -10,20 +10,15 @@
 .header {
     height: 100%;
     text-align: center;
-    margin-top: 0px;
+    padding-top: 250px;
+    padding-bottom: 250px;
     @include outer-container;
-    h1 {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
     button {
-        position: absolute;
-        font-size: 0.95em;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        // position: absolute;
+        // font-size: 0.95em;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
         background-color: transparent;
         border: none;
         outline: none;

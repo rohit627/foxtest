@@ -124,7 +124,8 @@ nav {
 .header {
   height: 100%;
   text-align: center;
-  margin-top: 0px;
+  padding-top: 250px;
+  padding-bottom: 250px;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
@@ -132,21 +133,7 @@ nav {
     clear: both;
     content: "";
     display: table; }
-  .header h1 {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
   .header button {
-    position: absolute;
-    font-size: 0.95em;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
     background-color: transparent;
     border: none;
     outline: none;
