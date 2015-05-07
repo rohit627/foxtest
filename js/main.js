@@ -9,7 +9,7 @@
     // $('#content').width($(window).width());
     $( window ).resize(function() {
         $('.header').css('padding-top', function() {
-            if( $(window).width() <= 1140 ) {
+            if( $(window).width() <= 1200 ) {
                 return Math.floor($(window).height()/3);
             }
         })
