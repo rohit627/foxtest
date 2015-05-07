@@ -1,10 +1,10 @@
 .hero {
     min-width: 100%;
-    background: url('../img/foxface.png') no-repeat local center top 40px $red;
+    background: url('../img/foxface.png') no-repeat local center top 30px $red;
     background-size: 55%;
     @include media(480px) {
         background-color: $white;
-        background: url('../img/littlefox3.jpg') no-repeat local center top 240px $red;
+        background: url('../img/littlefox3.jpg') no-repeat local center bottom 50px $red;
         background-size: 700px 427px;
     }
     @include media(1140px) {

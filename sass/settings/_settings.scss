@@ -3,3 +3,11 @@ body {
     @include background($white);
     color: $black;
 }
+header {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    @include clearfix;
+}

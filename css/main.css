@@ -10,6 +10,17 @@ body {
   background: #DDDDDB;
   color: #2c3e50; }
 
+header {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden; }
+  header::after {
+    clear: both;
+    content: "";
+    display: table; }
+
 @-webkit-keyframes swing {
   from {
     -webkit-transform: rotate(12deg);
@@ -125,13 +136,13 @@ nav {
 
 .hero {
   min-width: 100%;
-  background: url('../img/foxface.png') no-repeat local center top 40px #E74C3C;
+  background: url('../img/foxface.png') no-repeat local center top 30px #E74C3C;
   background-size: 55%;
   min-height: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
       background-color: #DDDDDB;
-      background: url('../img/littlefox3.jpg') no-repeat local center top 240px #E74C3C;
+      background: url('../img/littlefox3.jpg') no-repeat local center bottom 50px #E74C3C;
       background-size: 700px 427px; } }
   @media screen and (min-width: 1140px) {
     .hero {
@@ -218,14 +229,3 @@ section {
 
 .divider {
   width: 100%; }
-
-header {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  overflow: hidden; }
-  header::after {
-    clear: both;
-    content: "";
-    display: table; }
