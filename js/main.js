@@ -7,7 +7,12 @@
     })
     // $('#content').height($(window).height());
     // $('#content').width($(window).width());
-    // $( window ).resize(function() {
-    //     $( "#content" ).height( $( window ).height() );
-    // });
+    $( window ).resize(function() {
+        $('.header').css('padding-top', function() {
+            if($(window).width() <= 480) {
+                return Math.floor($(window).height()/3);
+            }
+            return Math.floor($(window).height()/3.3);
+        })
+    });
 })();
