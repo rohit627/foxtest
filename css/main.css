@@ -125,7 +125,8 @@ nav {
 
 .hero {
   min-width: 100%;
-  background: #E74C3C;
+  background: url('../img/foxface.png') no-repeat local center top 40px #E74C3C;
+  background-size: 55%;
   min-height: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
@@ -140,7 +141,7 @@ nav {
 .header {
   height: 100%;
   text-align: center;
-  padding-top: 190px;
+  padding-top: 200px;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }

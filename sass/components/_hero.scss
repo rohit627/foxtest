@@ -1,6 +1,7 @@
 .hero {
     min-width: 100%;
-    background: $red;
+    background: url('../img/foxface.png') no-repeat local center top 40px $red;
+    background-size: 55%;
     @include media(480px) {
         background-color: $white;
         background: url('../img/littlefox3.jpg') no-repeat local center top 240px $red;
@@ -15,7 +16,7 @@
 .header {
     height: 100%;
     text-align: center;
-    padding-top: 190px;
+    padding-top: 200px;
     @include media(480px) {
         padding-top: 220px;
     }
