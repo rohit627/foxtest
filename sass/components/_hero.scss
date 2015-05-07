@@ -1,17 +1,24 @@
 .hero {
     min-width: 100%;
-    background-image: url('../img/fox4.jpg');
-    background-position: 100px -150px;
-    background-attachment: local;
-    background-repeat: no-repeat;
-    background-size:100%;
+    background: $red;
+    @include media(480px) {
+        background-color: $white;
+        background: url('../img/littlefox3.jpg') no-repeat local center top 240px $red;
+        background-size: 700px 427px;
+    }
+    @include media(1140px) {
+        background: url('../img/fox4.jpg') no-repeat scroll right -150px top -150px ;
+        background-color: $white;
+    }
     min-height: 100%;
 }
 .header {
     height: 100%;
     text-align: center;
-    padding-top: 220px;
-    padding-bottom: 250px;
+    padding-top: 190px;
+    @include media(480px) {
+        padding-top: 220px;
+    }
     @include outer-container;
     button {
         // position: absolute;
@@ -27,9 +34,11 @@
         padding: 5px 10px;
         cursor: pointer;
         transition: all 0.2s ease-out;
-        &:hover {
-            color: $red;
-            border: 1px solid $red;
+        @include media(1140px) {
+            &:hover {
+                color: $red;
+                border: 1px solid $red;
+            }
         }
     }
 }

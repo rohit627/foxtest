@@ -6,6 +6,13 @@
     width: 100%;
     // box-shadow: 0 1px 0 lighten($black,40%);
 }
+#services {
+    opacity: 0;
+    @include media(480px) {
+        opacity: 1;
+        color: red;
+    }
+}
 nav {
     @include outer-container;
     padding: 0 10px;
@@ -46,18 +53,23 @@ nav {
             text-decoration: none;
             position: relative;
             color: darken($black,10%);
-            &:hover {
-                &::after {
-                    animation: swing 0.3s infinite;
-                    animation-direction: alternate;
+            @include media(1140px) {
+                &:hover {
+                    &::after {
+                        animation: swing 0.3s infinite;
+                        animation-direction: alternate;
+                    }
                 }
             }
             &::after {
-                transition: transform 0.3s ease-in;
+                transition: all 0.3s ease-in;
                 display: block;
                 position: absolute;
                 top: -23px;
-                right: -60px;
+                right: 75px;
+                @include media(480px) {
+                    right: -60px;
+                }
                 @include background(url('../img/tail.png') right top no-repeat);
                 background-size: contain;
                 transform: rotate(12deg);
