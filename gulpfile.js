@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browsersync = require('browser-sync').create();
 var notify = require('gulp-notify');
+var minify = require('gulp-minify-css');
 var reload = browsersync.reload;
 
 gulp.task('serve',['sass'], function() {
@@ -21,6 +22,7 @@ gulp.task('sass', function() {
             onError: notify.onError({message: 'Error'})
         }))
         .pipe(autoprefixer())
+        .pipe(minify())
         .pipe(gulp.dest('css'))
         .pipe(reload({stream: true}))
 });
